@@ -9,14 +9,14 @@ def manageStudent(): #Function For The Student Management System
 	x = "#" * 30
 	y = "=" * 28
 	global bye #Making Bye As Super Global Variable
-	bye = "\n {}\n# {} #\n# ===> Good bye <===  #\n# {} #\n {}".format(x, y, y, x) # Will Print GoodBye Message
+	bye = "\n {}\n# {} #\n# ===> Good bye. Logged out. <===  #\n# {} #\n {}".format(x, y, y, x) # Will Print GoodBye Message
 
 	#Printing Welcome Message And options For This Program
 	print(""" 
 
  
  ====================================================== 
- ======== Welcome To Student Management System	========
+ ======== Welcome To Student Management System	=======
  ======================================================
 
 Enter 1 : To View Student's List 
@@ -69,10 +69,9 @@ Enter 4 : To Remove Student
 	elif(userInput < 1 or userInput > 4): #Validating User Option
 		print("Please Enter Valid Option")	#Error Message	
 						
-#brought to you by code-projects.org
 manageStudent()
 
-def runAgain(): #Making Runable Problem1353
+def runAgain(): #Making Runable
 	runAgn = input("\nwant To Run Again Y/n: ")
 	if(runAgn.lower() == 'y'):
 		if(platform.system() == "Windows"): #Checking User OS For Clearing The Screen
@@ -82,6 +81,6 @@ def runAgain(): #Making Runable Problem1353
 		manageStudent()
 		runAgain()
 	else:
-		quit(bye) #Print GoodBye Message And Exit The Program
+		quit(bye) #Exit The Program
 
 runAgain()		
